@@ -27,13 +27,7 @@ mnv -version
 _Descargar el codigo fuente desde el repositorio de gitlab_
 
 ```
-git clone https://gitlab.com/jucaguilar-01/reba.git
-```
-
-_ingresar al directorio raiz en donde se ubica la carpeta del proyecto y ejecuta el siguiente comando maven_
-
-```
-mvn spring-boot:run
+git clone https://github.com/aguilarjuan/management
 ```
 
 una vez levantado el proyecto, el mismo estara escuchando en la URL: http://localhost:8080
@@ -45,10 +39,23 @@ _las pruebas se realizan mediante la herramientas Postman_
 exporte el archivo (reba.postman_collection.json) ubicacion:
 
 ```
-../src/resource/static/reba.postman_collection.json
+../src/resource/nisum.postman_collection.json
 ```
 
-### documentacion de aplicavion 🔩
+_Script shema DB_
+
+```
+../src/resource/init-shema-nisum.sql
+```
+
+_Diagrama de solucion_
+
+```
+../src/resource/diagrama-solucion.jpg
+```
+
+
+### documentacion de aplicacion 🔩
 
 _la documentacion de la Api Rest_
 
@@ -68,19 +75,19 @@ http://localhost:8080/h2-console
 
 ## Despliegue 📦
 
-_la aplicacion esta despelgada en la plataforma heroku (URL BASE)_
+_ingresar al directorio raiz en donde se ubica la carpeta del proyecto y ejecuta el siguiente comando maven_
 
 ```
-https://app-rebanking.herokuapp.com/
+mvn spring-boot:run
 ```
 
 ## Construido con 🛠️
 
-_Spring Boot 2.6.4_
+_Spring Boot 2.4.6_
 
 ## Versionado 📌
 
-codigo fuente es versionado en Gitlab
+codigo fuente es versionado en Github
 
 ## Autores ✒️
 
