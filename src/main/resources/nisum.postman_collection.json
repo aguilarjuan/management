@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "88dfe461-5ebb-43b7-9944-a22ae7665c99",
+		"name": "nisum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3054513"
+	},
+	"item": [
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"juan\",\n    \"email\": \"juan@gmail.com\",\n    \"password\": \"Nisu#2022\",\n    \"phones\": [\n        {\n            \"number\": \"267\",\n            \"cityCode\": \"34\",\n            \"countryCode\": \"34\"\n        },\n        {\n            \"number\": \"261\",\n            \"cityCode\": \"64\",\n            \"countryCode\": \"14\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/authentication/signUp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"signUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/authentication/signIn?email=juan@gmail.com&password=Nisu%232022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"authentication",
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "juan@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "Nisu%232022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activate-user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpc3N1ZXIta2V5Iiwic3ViIjoianVhbkBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjcwOTMyNjcyLCJleHAiOjE2NzA5MzYyNzJ9.xS0j-FUuUq2TXAElUMVhZ9bgXj-a8KnHdTRWH-RTJ5vSYofDi2xv-XoPhPo4yh7JAZ9IxfGuKgybOUqp94rZeg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"active\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/management/user/3ebc6786-2348-4a43-884c-840c5caba840/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"management",
+						"user",
+						"3ebc6786-2348-4a43-884c-840c5caba840",
+						"active"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
