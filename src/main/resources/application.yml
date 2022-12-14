@@ -28,6 +28,7 @@ spring:
 app:
   properties:
    password-pattern: ^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$
+   email-pattern: ^([a-z])+@([a-z])+[.]+(cl)$
 
   jwt:
     secret: secretKey
